@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import Home from "./pages/Home";
 import Store from "./pages/Store";
 import About from "./pages/About";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   const routes = [
@@ -11,15 +12,18 @@ const App = () => {
     { path: "/about", element: <About /> },
   ];
   return (
-    <Container className="mb-4">
-      <Routes>
-        {routes.map((route, index) => {
-          return (
-            <Route key={index} path={route.path} element={route.element} />
-          );
-        })}
-      </Routes>
-    </Container>
+    <>
+      <Navbar />
+      <Container className="mb-4">
+        <Routes>
+          {routes.map((route, index) => {
+            return (
+              <Route key={index} path={route.path} element={route.element} />
+            );
+          })}
+        </Routes>
+      </Container>
+    </>
   );
 };
 
