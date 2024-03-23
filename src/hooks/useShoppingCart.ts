@@ -1,4 +1,4 @@
-import { ShoppingCartContext } from "../providers/ShoppingCartContext";
+import { ShoppingCartContext } from "../providers/ShoppingCartProvider";
 import { useContext } from "react";
 
 export default function useShoppingCart() {
