@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Store from "./pages/Store";
 import About from "./pages/About";
 import Navbar from "./components/Navbar";
+import ShoppingCartProvider from "./providers/ShoppingCartContext";
 
 const App = () => {
   const routes = [
@@ -12,7 +13,7 @@ const App = () => {
     { path: "/about", element: <About /> },
   ];
   return (
-    <>
+    <ShoppingCartProvider>
       <Navbar />
       <Container className="mb-4">
         <Routes>
@@ -23,7 +24,7 @@ const App = () => {
           })}
         </Routes>
       </Container>
-    </>
+    </ShoppingCartProvider>
   );
 };
 
